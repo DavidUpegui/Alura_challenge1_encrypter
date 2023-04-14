@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Encriptador de frases</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="img-container">
-        <img class="logo--alura" src="./public/Vector.svg" alt="Alura logo">
+      <img class="logo--alura" src="./public/Vector.svg" alt="Alura logo" />
     </div>
     <main class="container">
-        <section class="input">
-            <textarea name="" id="" cols="30" rows="10" id="msg" placeholder="Ingrese el texto aquí"></textarea>
-            <p class="input-advice"><span class="logo--exclamation"><img src="./public/bi_exclamation-circle-fill.svg" alt="Exclamation logo"></span>Solo letras minúsculas y sin acentos</p>
-            <div class="btn-container">
-                <button class="btn btn-encrypt" id="btn-encrypt">Encriptar</button>
-                <button class="btn btn-unencrypt" id="btn-unencrypt">Desencriptar</button>
-            </div>
-        </section>
-        <section class="output">
-            <div class="notfound" id="not-found">
-                <img src="./public/Muñeco.svg" alt="Imagen de Muñeco">
-                <h3 class="output__title">Ningún mensaje fue encontrado</h3>
-                <p class="output__p--notfound">Ingresa el texto que desees encriptar o desencriptar</p>
-            </div>
-            <div class="found" id="found">
-                <p class="output__p--found">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis minus magni sequi aliquam sapiente impedit enim iure quaerat ullam cumque?</p>
-                <button class="btn--copy">Copiar</button>
-            </div>
-        </section>
+      <section class="input">
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          id="msg"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+        <p class="input-advice">
+          <span class="logo--exclamation"
+            ><img
+              src="./public/bi_exclamation-circle-fill.svg"
+              alt="Exclamation logo" /></span
+          >Solo letras minúsculas y sin acentos
+        </p>
+        <div class="btn-container">
+          <button class="btn btn-encrypt" id="btn-encrypt">Encriptar</button>
+          <button class="btn btn-unencrypt" id="btn-unencrypt">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="output">
+        <div class="notfound" id="not-found">
+          <img src="./public/Muñeco.svg" alt="Imagen de Muñeco" />
+          <h3 class="output__title">Ningún mensaje fue encontrado</h3>
+          <p class="output__p--notfound">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
+        </div>
+        <div class="found" id="found">
+          <p class="output__p--found">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            minus magni sequi aliquam sapiente impedit enim iure quaerat ullam
+            cumque?
+          </p>
+          <button class="btn--copy">Copiar</button>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
