@@ -7,9 +7,29 @@
     <title>Encriptador de frases</title>
 </head>
 <body>
-
+    <div class="img-container">
+        <img class="logo--alura" src="./public/Vector.svg" alt="Alura logo">
+    </div>
     <main class="container">
-        
+        <section class="input">
+            <textarea name="" id="" cols="30" rows="10" id="msg" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="input-advice"><span class="logo--exclamation"><img src="./public/bi_exclamation-circle-fill.svg" alt="Exclamation logo"></span>Solo letras minúsculas y sin acentos</p>
+            <div class="btn-container">
+                <button class="btn btn-encrypt" id="btn-encrypt">Encriptar</button>
+                <button class="btn btn-unencrypt" id="btn-unencrypt">Desencriptar</button>
+            </div>
+        </section>
+        <section class="output">
+            <div class="notfound" id="not-found">
+                <img src="./public/Muñeco.svg" alt="Imagen de Muñeco">
+                <h3 class="output__title">Ningún mensaje fue encontrado</h3>
+                <p class="output__p--notfound">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+            <div class="found" id="found">
+                <p class="output__p--found">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis minus magni sequi aliquam sapiente impedit enim iure quaerat ullam cumque?</p>
+                <button class="btn--copy">Copiar</button>
+            </div>
+        </section>
     </main>
 </body>
 </html>
