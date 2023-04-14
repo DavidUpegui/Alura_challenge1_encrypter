@@ -17,4 +17,75 @@ html, body {
     width: 100%;
     height: 100vh;
     background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
 }
+.logo--alura{
+    position: absolute;
+}
+.container{
+    width: 83%;
+    height: 90%;
+    margin-left: auto;
+    display: flex;
+}
+.input{
+    height: 100%;
+    flex-grow: 1;
+    padding: 144px 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.textarea{
+    resize: none;
+    color: var(--dark-blue);
+    border: none;
+    background-color: var(--light-blue);
+    font-size: 32px;
+    height: 80%;
+}
+.textarea::placeholder{
+    color: var(--dark-blue);
+}
+.input-advice{
+    font-size: 12px;
+    color: var(--medium-gray);
+    margin-top:auto;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.logo--exclamation{
+    width: 16px;
+    margin-right: 0.3rem;
+}
+.logo--exclamation img {
+    width: 100%;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+}
+.btn{
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 16px;
+    width: 100%;
+    margin: 0.6rem;
+    align-items: center;
+    justify-content: center;
+}
+.btn--encrypt{
+    color: white;
+    background-color: var(--dark-blue);
+    border: none;
+}
+.btn--unencrypt{
+    color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+    background-color: var(--light-gray);
+}
+.output{
+    background-color: white;
+}
+
