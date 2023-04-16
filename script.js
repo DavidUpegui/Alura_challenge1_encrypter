@@ -41,7 +41,19 @@ function getMessage() {
 
 function handleEncryptedClick() {
   var encryptedMsg = encryptMessage(getMessage());
+  showMessage(encryptedMsg);
   console.log(encryptedMsg);
+}
+
+function showMessage(msg){
+  if(msg === ""){
+    divMsgFound.classList.add('hide');
+    divMsgNotFound.classList.remove('hide');
+    return
+  }
+  divMsgFound.classList.remove('hide');
+  divMsgNotFound.classList.add('hide');
+  txtEncryptedMsg.innerHTML = msg;
 }
 
 btnEncrypt.onclick = handleEncryptedClick;
