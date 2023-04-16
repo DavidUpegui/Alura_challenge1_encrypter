@@ -138,6 +138,52 @@ body {
   font-size: 24px;
   max-height: 90%;
   overflow-y: scroll;
+  margin: 1rem;
+}
+
+@media (max-width: 768px){
+  html, body{
+    min-height: 100vh;
+    max-height: fit-content;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: start;
+    align-items: start;
+  }
+  .logo--alura{
+    position: inherit;
+    align-self: start;
+    margin: 2rem;
+  }
+  .container{
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    height: 90vh;
+  }
+  .input{
+    flex-grow: 1;
+    padding: 0;
+    padding-top: 4rem ;
+  }
+  .output{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    margin: 0;
+    margin-top: 4rem;
+  }
+  .img--munheco{
+    display: none;
+  }
+  .notfound{
+    width: 100%;
+    height: fit-content;
+    position: inherit;
+    top:0 ;
+    left: 0;
+    transform: translate(0,0);
+  }
 }
 
 
