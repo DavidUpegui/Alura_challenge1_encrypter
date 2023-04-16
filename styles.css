@@ -84,6 +84,11 @@ body {
   margin: 0.6rem;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s;
+}
+.btn:hover{
+  cursor: pointer;
+  transform: scale(105%);
 }
 .btn--primary {
   color: white;
@@ -205,5 +210,12 @@ body {
 
 .hide{
   display: none;
+}
+.disabled{
+  filter: brightness(80%);
+  transform: none !important;
+}
+.disabled:hover{
+  cursor: not-allowed;
 }
 

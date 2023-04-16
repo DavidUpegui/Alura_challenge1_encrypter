@@ -35,6 +35,11 @@ function encryptMessage(msg) {
   return encryptedMsg;
 }
 
+function isMessageCorrect(msg){
+  const regexp = /^[a-z\s]+$/
+  return regexp.test(msg);
+}
+
 function unencryptMessage(msg){
   var unencrypted = msg;
   unencrypted = unencrypted.replaceAll('ai', 'a'); 
@@ -53,7 +58,27 @@ function toggleEncrypt(e) {
     msg = unencryptMessage(inpMsg.value);
   }
   showMessage(msg);
-  console.log(msg);
+}
+
+function disableButton(btn){
+  btn.disabled = true;
+  btn.classList.add('disabled');
+}
+
+function enableButton(btn){
+  btn.disabled = false;
+  btn.classList.remove('disabled');
+}
+
+function handleOnInput(e){
+  const msg = e.target.value;
+  if(!isMessageCorrect(msg)){
+    disableButton(btnEncrypt);
+    disableButton(btnUnencrypt);
+  }else{
+    enableButton(btnEncrypt);
+    enableButton(btnUnencrypt);
+  }
 }
 
 function showMessage(msg){
@@ -67,5 +92,6 @@ function showMessage(msg){
   txtEncryptedMsg.innerHTML = msg;
 }
 
+inpMsg.oninput = handleOnInput;
 btnEncrypt.onclick = toggleEncrypt;
 btnUnencrypt.onclick = toggleEncrypt;
