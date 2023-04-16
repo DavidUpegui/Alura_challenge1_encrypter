@@ -60,6 +60,12 @@ function toggleEncrypt(e) {
   showMessage(msg);
 }
 
+function handleCopyClick(e){
+  const copiedText = txtEncryptedMsg.innerText;
+  navigator.clipboard.writeText(copiedText);
+  alert(`El texto ha sido copiado en el portapapeles.`);
+}
+
 function disableButton(btn){
   btn.disabled = true;
   btn.classList.add('disabled');
@@ -89,9 +95,10 @@ function showMessage(msg){
   }
   divMsgFound.classList.remove('hide');
   divMsgNotFound.classList.add('hide');
-  txtEncryptedMsg.innerHTML = msg;
+  txtEncryptedMsg.innerText = msg;
 }
 
 inpMsg.oninput = handleOnInput;
 btnEncrypt.onclick = toggleEncrypt;
 btnUnencrypt.onclick = toggleEncrypt;
+btnCopy.onclick = handleCopyClick;
