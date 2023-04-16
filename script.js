@@ -35,14 +35,25 @@ function encryptMessage(msg) {
   return encryptedMsg;
 }
 
-function getMessage() {
-  return inpMsg.value;
+function unencryptMessage(msg){
+  var unencrypted = msg;
+  unencrypted = unencrypted.replaceAll('ai', 'a'); 
+  unencrypted = unencrypted.replaceAll('enter', 'e'); 
+  unencrypted = unencrypted.replaceAll('imes', 'i'); 
+  unencrypted = unencrypted.replaceAll('ober', 'o'); 
+  unencrypted = unencrypted.replaceAll('ufat', 'u'); 
+  return unencrypted
 }
 
-function handleEncryptedClick() {
-  var encryptedMsg = encryptMessage(getMessage());
-  showMessage(encryptedMsg);
-  console.log(encryptedMsg);
+function toggleEncrypt(e) {
+  var msg;
+  if(e.target.id === 'btn-encrypt'){
+    msg = encryptMessage(inpMsg.value);
+  }else{
+    msg = unencryptMessage(inpMsg.value);
+  }
+  showMessage(msg);
+  console.log(msg);
 }
 
 function showMessage(msg){
@@ -56,4 +67,5 @@ function showMessage(msg){
   txtEncryptedMsg.innerHTML = msg;
 }
 
-btnEncrypt.onclick = handleEncryptedClick;
+btnEncrypt.onclick = toggleEncrypt;
+btnUnencrypt.onclick = toggleEncrypt;
