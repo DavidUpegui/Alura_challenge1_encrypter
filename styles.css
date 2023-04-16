@@ -79,7 +79,6 @@ body {
   display: inline-flex;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  width: 100%;
   margin: 0.6rem;
   align-items: center;
   justify-content: center;
@@ -88,11 +87,13 @@ body {
   color: white;
   background-color: var(--dark-blue);
   border: none;
+  flex-grow: 1;
 }
 .btn--secondary{
   background-color: transparent;
   color: var(--dark-blue);
   border: 1px solid var(--dark-blue);
+  flex-grow: 1;
 }
 
 .output {
@@ -125,6 +126,7 @@ body {
   margin: 1rem;
   text-align: center;
   color: var(--medium-gray);
+  font-size: 16px;
 }
 .found{
   height: 100%;
@@ -139,6 +141,10 @@ body {
   max-height: 90%;
   overflow-y: scroll;
   margin: 1rem;
+}
+.btn--copy{
+  flex-grow: initial;
+  margin-top: auto;
 }
 
 @media (max-width: 768px){
@@ -183,6 +189,15 @@ body {
     top:0 ;
     left: 0;
     transform: translate(0,0);
+  }
+}
+
+@media (max-width: 376px){
+  .input{
+    padding-top: 0;
+  }
+  .btn-container{
+    flex-direction: column;
   }
 }
 
