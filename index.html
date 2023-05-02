@@ -20,7 +20,7 @@
     <main class="container">
       <section class="input">
         <textarea
-        class="textarea"
+          class="textarea"
           name=""
           id="inp-msg"
           cols="30"
@@ -43,21 +43,29 @@
       </section>
       <section class="output">
         <div class="notfound" id="not-found">
-          <img class="img--munheco" src="./public/Muñeco.svg" alt="Imagen de Muñeco" />
+          <img
+            class="img--munheco"
+            src="./public/Muñeco.svg"
+            alt="Imagen de Muñeco"
+          />
           <h3 class="output__title">Ningún mensaje fue encontrado</h3>
           <p class="output__p--notfound">
             Ingresa el texto que desees encriptar o desencriptar
           </p>
         </div>
-        <div class="found hide" id="found">
-          <p class="output__p--found" id="encrypted-msg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            minus magni sequi aliquam sapiente im
-          </p>
-          <button class="btn btn--secondary btn--copy" id="btn-copy">Copiar</button>
+        <div class="found d-none" id="found">
+          <p class="output__p--found" id="encrypted-msg"></p>
+          <button class="btn btn--secondary btn--copy" id="btn-copy">
+            Copiar
+          </button>
         </div>
       </section>
     </main>
+    <div class="copy-advice hide" id="copy-advice">
+      <p class="copy-advice__text">
+        El texto ha sido copiado en el portapapeles
+      </p>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

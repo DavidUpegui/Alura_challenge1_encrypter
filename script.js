@@ -6,6 +6,7 @@ const divMsgNotFound = document.getElementById("not-found");
 const divMsgFound = document.getElementById("found");
 const txtEncryptedMsg = document.getElementById("encrypted-msg");
 const btnCopy = document.getElementById("btn-copy");
+const copyAdvice = document.getElementById("copy-advice");
 
 //Creating initial global values ----------------------------------
 const encryptionRules = {
@@ -56,12 +57,12 @@ function handleToggleEncryptClick(e) {
 }
 function showMessage(msg) {
   if (msg === "") {
-    divMsgFound.classList.add("hide");
-    divMsgNotFound.classList.remove("hide");
+    divMsgFound.classList.add("d-none");
+    divMsgNotFound.classList.remove("d-none");
     return;
   }
-  divMsgFound.classList.remove("hide");
-  divMsgNotFound.classList.add("hide");
+  divMsgFound.classList.remove("d-none");
+  divMsgNotFound.classList.add("d-none");
   txtEncryptedMsg.innerText = msg;
 }
 
@@ -93,7 +94,13 @@ function enableButton(btn) {
 function handleCopyClick() {
   const copiedText = txtEncryptedMsg.innerText;
   navigator.clipboard.writeText(copiedText);
-  alert(`El texto ha sido copiado en el portapapeles.`);
+  showCopyAdvice();
+}
+
+//Función para mostrar alerta
+function showCopyAdvice(){
+  copyAdvice.classList.remove('hide');
+  setTimeout(()=>{copyAdvice.classList.add('hide')}, 2000)
 }
 
 //Adding the events to the Dom elements. --------------------------------------
@@ -101,3 +108,5 @@ btnEncrypt.onclick = handleToggleEncryptClick;
 btnUnencrypt.onclick = handleToggleEncryptClick;
 inpMsg.oninput = handleOnInput;
 btnCopy.onclick = handleCopyClick;
+
+

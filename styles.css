@@ -208,7 +208,26 @@ body {
   }
 }
 
+
+.copy-advice{
+  background-color: white;
+  font-size: 16px;
+  color: var(--medium-gray);
+  border-radius: 1rem;
+  display: flex;
+  padding: 2rem 1rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity ease-out 0.5s;
+}
+
 .hide{
+  opacity: 0;
+}
+
+.d-none{
   display: none;
 }
 .disabled{
